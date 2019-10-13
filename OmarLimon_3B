@@ -1,0 +1,294 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OmarLimon3B
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int opt;
+            do
+             {
+                Console.WriteLine("");
+                Console.WriteLine("                  -<Escoja una Opcion>-              ");
+                Console.WriteLine("                 |1.- Ejercicio 1  |");
+                Console.WriteLine("                 |2.- Ejercicio 2  |");
+                Console.WriteLine("                 |3.- Ejercicio 3  |");
+                Console.WriteLine("                 |4.- Ejercicio 4  |");
+                Console.WriteLine("                 |5.- Ejercicio 5  |");
+                Console.WriteLine("                 |6.- Ejercicio 6  |");
+                Console.WriteLine("                 |7.- Ejercicio 7  |");
+                Console.WriteLine("                 |8.- Ejercicio 8  |");
+                Console.WriteLine("                 |9.- Ejercicio 9  |");
+                Console.WriteLine("                 |10.- Ejercicio 10|");
+                Console.WriteLine("                 |11.- Salir       |");
+                Console.Write("----------->");
+                opt = Convert.ToInt32(Console.ReadLine());
+                switch (opt)
+                {
+                    case 1:
+                        Console.WriteLine("              [EJERCICIO 1]         ");
+                        int cantidad, numero, mayor = 0;
+                        Console.Write("Ingrese la cantidad denumeros que desea comparar ");
+                        cantidad = Convert.ToInt32(Console.ReadLine());
+                        for (int c = 0; c < cantidad; c++)
+                        {
+                            Console.Write("Introduce valores enteros ");
+                            numero = Convert.ToInt32(Console.ReadLine());
+                            if (numero > mayor)
+                            {
+                                mayor = numero;
+                            }
+
+                        }
+                        Console.Write("El numero mayor es " + mayor);
+
+                        break;
+                    case 2:
+                        Console.WriteLine("              [EJERCICIO 2]         ");
+                        int entero;
+                        Console.Write("Ingrese Numero entero ");
+                        entero = Convert.ToInt32(Console.ReadLine());
+                        for (int c = 0; c < entero; c++)
+                        {
+                            Console.Write("*");
+                        }
+                        Console.WriteLine(" ");
+                        for (int c = 0; c < entero - 2; c++)
+                        {
+                            Console.Write("*");
+                            for (int d1 = 0; d1 < entero - 2; d1++)
+                            {
+                                Console.Write(" ");
+                            }
+                            Console.WriteLine("*");
+                        }
+                        for (int c = 0; c < entero; c++)
+                        {
+                            Console.Write("*");
+                        }
+                            break;
+                    case 3:
+                        Console.WriteLine("              [EJERCICIO 3]         ");
+                        int cantidad1;
+                        double precio, total = 0, sum = 0;
+                        do
+                        {
+
+                            Console.Write("Ingrese la Cantidad=");
+                            cantidad1 = Convert.ToInt32(Console.ReadLine());
+                            Console.Write("Ingrese el Precio= ");
+                            precio = Convert.ToDouble(Console.ReadLine());
+                            total = cantidad1 * precio;
+                            sum = sum + total;
+
+                        } while (cantidad1 != 0);
+                        Console.WriteLine("el total es = " + sum);
+
+                        break;
+                    case 4:
+                        Console.WriteLine("              [EJERCICIO 4]         ");
+                        int salario, horas, pregunta;
+                        do
+                        {
+
+                            Console.WriteLine("Introduce las horas trabajadas: ");
+                            horas = Convert.ToInt32(Console.ReadLine());
+                            if (horas <= 35)
+                            {
+                                salario = horas * 15;
+                                Console.WriteLine("El trabajador gana un salario de: " + salario + " dólares");
+                            }
+                            else
+                            {
+                                int valort, extra;
+                                extra = (horas - 35) * 22;
+                                salario = 35 * 15;
+                                valort = salario + extra;
+
+                                Console.WriteLine("El trabajador gana un salario de: " + valort + " dólares");
+                            }
+                            Console.WriteLine("¿Desea calcular otro salario? ");
+                            Console.WriteLine("1.-Si");
+                            Console.WriteLine("0.-No");
+                            pregunta = Convert.ToInt32(Console.ReadLine());
+                        } while (pregunta != 0);
+
+                        break;
+                    case 5:
+                        Console.WriteLine("              [EJERCICIO 5]         ");
+                        int filas;
+                        Console.Write("Ingrese el numro de filas ");
+                        filas = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine();
+                        for (int c = 0; c < filas + 1; c++)
+                        {
+                            for (int d2 = 0; d2 < filas - c; d2++)
+                            {
+                                Console.Write(" ");
+                            }
+                            for (int a = 0; a < (c * 2) - 1; a++)
+                            {
+                                Console.Write("*");
+                            }
+                            Console.WriteLine();
+                        }
+                        break;
+                    case 6:
+                        Console.WriteLine("              [EJERCICIO 6]         ");
+                        int fila;
+                        Console.Write("Ingrese el numro de filas ");
+                        fila = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine();
+                        for (int c = 0; c < fila + 1; c++)
+                        {
+                            for (int d3 = 0; d3 < fila - c; d3++)
+                            {
+                                Console.Write(" ");
+                            }
+                            for (int a = 0; a < (c * 2) - 1; a++)
+                            {
+                                Console.Write("*");
+                            }
+                            Console.WriteLine();
+                        }
+                        for (int c = fila; c >= 1; c = c - 1)
+                        {
+                            for (int d3 = 0; d3 < fila - c; d3++)
+                            {
+                                Console.Write(" ");
+                            }
+                            for (int a = 0; a < (c * 2) - 1; a++)
+                            {
+                                Console.Write("*");
+                            }
+                            Console.WriteLine();
+                        }
+
+
+
+                        break;
+                    case 7:
+                        Console.WriteLine("              [EJERCICIO 7]         ");
+                        int d = 101;
+                        for (int c = 0; c < 101; c++)
+                        {
+                            d = d - 1;
+                            Console.WriteLine(" |" + c + "    |" + d);
+
+                        }
+
+                        break;
+                    case 8:
+                        Console.WriteLine("              [EJERCICIO 8]         ");
+                        int dato,dos=0,tres=0;
+                        Console.Write("Ingrese numero= ");
+                        dato = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("+UNO    " + "+DOS     " + "+TRES");
+                        for (int uno=1;uno<=dato;uno++)
+                        {
+                            dos = dos + 2;
+                            tres = tres + 3;
+                            
+                            if(dos>dato)
+                            {
+                                if(tres>dato)
+                                {
+                                    Console.WriteLine("  "+uno+"       " + "     " + "     " );
+                                }
+                                if(tres<=dato)
+                                {
+                                    Console.WriteLine("  "+uno+"       "+tres+"     ");
+                                }
+                            }
+                            if(dos<=dato)
+                            {
+                                if (tres > dato)
+                                {
+                                    Console.WriteLine("  "+uno+"       "+dos+"      ");
+                                }
+                                if(tres<=dato)
+                                { 
+                                    Console.WriteLine("  "+uno+"       "+dos+"      " +tres + " ");
+                                }
+                            }
+                        }
+                         
+                        break;
+                    case 9:
+                        Console.WriteLine("              [EJERCICIO 9]         ");
+                        int numero2, re;
+                        Console.Write("Ingrese numero del que desea ver la TablaDeMultiplicar = ");
+                        numero2 = Convert.ToInt32(Console.ReadLine());
+                        for (int c = 1; c <= 15; c++)
+                        {
+                            re = numero2 * c;
+                            Console.WriteLine(c + "X" + numero2 + " = " + re);
+                        }
+
+                        break;
+                    case 10:
+                        Console.WriteLine("              [EJERCICIO 10]         ");
+                        int opcion;
+
+                        do
+                        {
+                            
+                            Console.WriteLine("");
+                            Console.WriteLine("Escoga una Opcion");
+                            Console.WriteLine("1.- SALIR");
+                            Console.WriteLine("2.-SUMATORIO");
+                            Console.WriteLine("3.- FACTORIAL");
+                            Console.Write("----------->");
+                            opcion = Convert.ToInt32(Console.ReadLine());
+
+                            switch (opcion)
+                            {
+                                case 1:
+                                    
+                                    break;
+                                case 2:
+                                    int numero3, sum1 = 0;
+                                    Console.Write("Ingrese Numero ");
+                                    numero3 = Convert.ToInt32(Console.ReadLine());
+                                    for (int c = 0; c < numero3; c++)
+                                    {
+                                        sum1 = sum1 + c;
+                                    }
+                                    Console.WriteLine("El sumatorio es= " + sum1);
+                                    break;
+                                case 3:
+                                    int numero4;
+                                    double factorial = 1;
+                                    Console.Write("Ingrese Numero : ");
+                                    numero4 = Convert.ToInt32(Console.ReadLine());
+                                    while (numero4 != 0)
+                                    {
+                                        factorial = factorial * numero4;
+                                        numero4--;
+                                    }
+                                    Console.WriteLine("El factorial es = " + factorial);
+                                    break;
+                                
+                                  
+
+
+
+                            }
+                        } while (opcion != 1);
+                        Console.WriteLine("A FINALIZADO");
+
+                        break;
+                }
+                Console.WriteLine("");
+            }while (opt != 11) ;
+            Console.WriteLine("!!!!!!!!!!!!!!!![A FINALIZADO]!!!!!!!!!!!!!!!!!");        
+            Console.ReadKey();
+            
+        }
+    }
+}
